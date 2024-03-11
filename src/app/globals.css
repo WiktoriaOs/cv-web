@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');*/
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,10 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(#282c34, #282c34);
+ /* background: radial-gradient(#282c34, #282c34);*/
+ background-image: url(2.jpg);
+ background-repeat: no-repeat;
+ width: 100%;
 }
 
 .not-found,
