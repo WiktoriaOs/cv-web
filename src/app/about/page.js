@@ -22,7 +22,8 @@ export default function Home() {
         </nav>
     </header>
     <div className={classes.section}>
-      <h1>Moja strona</h1>
+      <h1>O mnie</h1>
+      <p>Pisanie strony za pomocą NEXT.js</p>
     </div>
     </>
   );
