@@ -1,29 +1,20 @@
-import Link from "next/link";
+
+import MainHeader from '@/components/main-header';
 import classes from './page.module.css';
+
 
 export default function Home() {
   return (
     <>
-    <header className={classes.header}>
-        <Link className={classes.logo} href='/'>
-            
-            Wiktoria
-        </Link>
-
-        <nav className={classes.nav}>
-            <ul>
-                <li>
-                    <Link href='/'>Strona główna</Link>
-                </li>
-                <li>
-                <Link href='/about'>O mnie</Link>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <header className={classes.header}/>
+    
+    
+    <main>
     <div className={classes.section}>
       <h1>Moja strona</h1>
+      <h4>Jestem frontend developerem.</h4>
     </div>
+    </main>
     </>
   );
 }

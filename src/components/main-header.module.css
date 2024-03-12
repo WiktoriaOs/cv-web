@@ -10,7 +10,6 @@
       padding: 2rem 10%;
     }
   }
-  
   .nav ul {
     list-style: none;
     margin: 0;
@@ -20,26 +19,7 @@
     /* font-family: 'Montserrat', sans-serif; */
     font-size: 1rem;
   }
-  .nav li
-  {
-    text-decoration: none;
-      color: #ddd6cb;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      background: linear-gradient(90deg, #f0edea, #c9c3ba);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  .nav li:hover,
-  .nav li:active {
-    background: linear-gradient(90deg, #ff8a05, #f9b331);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
-  }
+  
   .logo {
     display: flex;
     align-items: center;
@@ -59,18 +39,4 @@
     height: 5rem;
     object-fit: contain;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
-  }
-  .section {
-    display: flex;
-    flex-direction: column;
-    color: #ddd6cb;
-    font-size: 1.5rem;
-    max-width: 50rem;
-    width: 90%;
-    margin: 2rem auto;
-    text-align: center;
-  }
-  .section p
-  {
-    font-size: 1em;
   }
