@@ -9,7 +9,7 @@ export default function Home() {
     <main>
     <div className={classes.section}>
       <h1>Witam na stronie cv</h1>
-      <p>Jestem frontend developerem.</p>
+      <p>Jestem Front-end Developerem.</p>
       <div className={classes.button}>
         <Button/>
       </div>

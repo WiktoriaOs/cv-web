@@ -10,9 +10,9 @@ html {
 
 body {
   margin: 0;
- /* background: radial-gradient(#282c34, #282c34);*/
- background-image: url(2.jpg);
- background-repeat: no-repeat;
+  background: radial-gradient(#282c34, #282c34);
+/* background-image: url(2.jpg);
+ background-repeat: no-repeat;*/
  width: 100%;
 }
 
