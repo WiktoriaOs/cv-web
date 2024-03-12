@@ -1,5 +1,4 @@
-
-import MainHeader from '@/components/main-header';
+import Button from '@/components/button';
 import classes from './page.module.css';
 
 
@@ -7,12 +6,14 @@ export default function Home() {
   return (
     <>
     <header className={classes.header}/>
-    
-    
     <main>
     <div className={classes.section}>
-      <h1>Moja strona</h1>
-      <h4>Jestem frontend developerem.</h4>
+      <h1>Witam na stronie cv</h1>
+      <p>Jestem frontend developerem.</p>
+      <div className={classes.button}>
+        <Button/>
+      </div>
+      
     </div>
     </main>
     </>

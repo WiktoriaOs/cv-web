@@ -63,12 +63,19 @@
 .section {
   display: flex;
   flex-direction: column;
-  color: #ddd6cb;
+  color: #e7e4df;
   font-size: 1.5rem;
   max-width: 50rem;
   width: 90%;
-  margin: 2rem auto;
+  margin: 10rem auto;
   text-align: center;
+}
+.section p{
+  font-size: 1.25rem;
+  color: #c4beb6;
+}
+.button{
+  text-decoration: none;
 }
 
 /*.main {
