@@ -6,10 +6,14 @@ import logoImg from "@/app/about/images/1.jpg";
 
 
 
-export default function Home() {
+export default () => {
   return (
-    <><div className={classes.section}>
-      <h1>O mnie</h1><br/>
+    <>
+    <div className={classes.cta}>
+      O mnie
+    </div>
+    <div className={classes.section}>
+      <h1>O mnie</h1>
       <p>Pisanie strony za pomocą NEXT.js</p>
     </div>
     <header className={classes.header}>
@@ -50,7 +54,8 @@ export default function Home() {
             <td>+48 000 000 000</td>
           </tr>
         </table>
-        <br/><Button/>
+        <br/>
+        <Button/>
       </div>
     </div>
     </header>

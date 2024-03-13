@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem;
+    gap: 50px;
   }
   
   @media (min-width: 768px) {
@@ -10,7 +11,81 @@
       padding: 2rem 10%;
     }
   }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header{
+    display: inline;
+
+  }
+  .img{
+    height:600px ;
+    width: 400px;
+  }
+  .center{
+    height:600px ;
+    width: 450px;
+  }
   
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header{
+    display: inline;
+  }
+  .img{
+    height:800px ;
+    width: 600px;
+  }
+  .center{
+    height:600px ;
+    width: 650px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header{
+    display: inline;
+  }
+  .img{
+    height:800px ;
+    width: 600px;
+  }
+  .center{
+    height:600px ;
+    width: 750px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header{
+    display: flex;
+  }
+  .img{
+    height:600px ;
+    width: 400px;
+  }
+  .center{
+    height:600px ;
+    width: 500px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header{
+    display: flex;
+  }
+  .img{
+    height:600px ;
+    width: 400px;
+  }
+  .center{
+    height:800px ;
+    width: 800px;
+  }
+}
  
   .section {
     
@@ -55,14 +130,28 @@
   .center{
     font-size: 1.5rem;
     text-align: justify;
-    height: 90%;
+    /*height: 90%;
+    width: 700px;*/
   }
   .center p{
     font-size: 1rem;
   }
   .img{
-    width: 60%;
-    height: 60%;
+    /*width: 400px;
+    height: 600px;*/
     border-radius: 25px;
+  }
+  .cta{
+    color: #ddd6cb;
+    font-size: 1.5rem;
+    max-width: 50rem;
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #a19f9b;
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+   padding: 10px;
   }
  
