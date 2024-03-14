@@ -6,7 +6,7 @@ import logoImg from "@/app/about/images/1.jpg";
 
 
 
-export default () => {
+export default function About()  {
   return (
     <>
     <div className={classes.cta}>
