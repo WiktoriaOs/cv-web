@@ -4,6 +4,7 @@
     align-items: center;
     padding: 2rem 1rem;
     gap: 50px;
+    max-width: 100%;
   }
   
   @media (min-width: 768px) {
@@ -11,20 +12,34 @@
       padding: 2rem 10%;
     }
   }
+  @media only screen and (max-width: 320px) {
+    .header{
+      display: inline;
+  
+    }
+    /*.img{
+      height:600px ;
+      width: 320px;
+    }
+    .center{
+      height:600px ;
+      width: 450px;
+    }*/
+  }
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .header{
     display: inline;
 
   }
-  .img{
+  /*.img{
     height:600px ;
     width: 400px;
   }
   .center{
     height:600px ;
     width: 450px;
-  }
+  }*/
   
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -32,14 +47,14 @@
   .header{
     display: inline;
   }
-  .img{
+ /* .img{
     height:800px ;
     width: 600px;
   }
   .center{
     height:600px ;
     width: 650px;
-  }
+  }*/
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -47,14 +62,14 @@
   .header{
     display: inline;
   }
-  .img{
+  /*.img{
     height:800px ;
     width: 600px;
   }
   .center{
     height:600px ;
     width: 750px;
-  }
+  }*/
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -62,14 +77,14 @@
   .header{
     display: flex;
   }
-  .img{
+  /*.img{
     height:600px ;
     width: 400px;
   }
   .center{
     height:600px ;
     width: 500px;
-  }
+  }*/
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -81,10 +96,10 @@
     height:600px ;
     width: 400px;
   }
-  .center{
+  /*.center{
     height:800px ;
     width: 800px;
-  }
+  }*/
 }
  
   .section {
@@ -95,6 +110,7 @@
     width: 90%;
     margin: 1rem auto;
     text-align: center;
+    
     
   }
   .section p
@@ -112,6 +128,7 @@
     margin: 2rem auto;
     text-align: center;
     height: 700px;
+
   }
   .main table
   {
@@ -137,9 +154,13 @@
     font-size: 1rem;
   }
   .img{
-    /*width: 400px;
-    height: 600px;*/
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
+    max-width: 500px;
+    max-height: 680px;
+    min-height: 650px;
+    min-width: 450px;
   }
   .cta{
     color: #ddd6cb;

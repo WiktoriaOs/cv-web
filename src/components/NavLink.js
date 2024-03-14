@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import classes from "./NavLink.module.css";
 
-function NavLink({href,children}){
+export default ({href,children})=>{
     const path=usePathname();
     return (
     <Link href={href} className={
@@ -14,4 +14,3 @@ function NavLink({href,children}){
     </Link>
     );
 }
-export default NavLink;
