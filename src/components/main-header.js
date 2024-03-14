@@ -2,7 +2,7 @@ import classes from "./main-header.module.css";
 import NavLink from "./NavLink";
 import Link from "next/link";
 
-export default ()=>{
+export default function MainHeader (){
     return(<>
     <header className={classes.header}>
         <Link className={classes.logo} href='/'> 
