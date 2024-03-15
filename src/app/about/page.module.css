@@ -49,8 +49,8 @@
     display: flex;
   }
   .img{
-    min-width: 480px;
-    min-height: 680px;
+    
+    height: 100vh;
   }
   
 }

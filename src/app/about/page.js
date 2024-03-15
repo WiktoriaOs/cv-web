@@ -2,12 +2,25 @@ import Image from 'next/image';
 import classes from './page.module.css';
 import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
-
+import Head from 'next/head';
 
 
 export default function About()  {
   return (
     <>
+    <Head>
+        <title>
+          Strona cv
+        </title>
+        <meta
+          name="description"
+          content="Strona cv stworzona przeze mnie."
+        />
+        <meta
+          name="keywords"
+          content="CV" 
+        />
+      </Head>
     <div className={classes.cta}>
       O mnie
     </div>
