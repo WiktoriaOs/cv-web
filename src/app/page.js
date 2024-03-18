@@ -1,29 +1,38 @@
-import Link from "next/link";
+import Button from '@/components/button';
 import classes from './page.module.css';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
-    <header className={classes.header}>
-        <Link className={classes.logo} href='/'>
-            
-            Wiktoria
-        </Link>
-
-        <nav className={classes.nav}>
-            <ul>
-                <li>
-                    <Link href='/'>Strona główna</Link>
-                </li>
-                <li>
-                <Link href='/about'>O mnie</Link>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <Head>
+        <title>
+          Strona cv
+        </title>
+        <meta
+          name="description"
+          content="Strona cv o front-end developerze. Informacje kontaktowe. "
+        />
+        <meta
+          name="keywords"
+          content="Wiktoria Osóbka-cv" 
+        />
+        <meta property="og:title" content="CV-WEB" />
+        <meta property="og:url" content="https://cv-web-alpha-woad.vercel.app/" />
+        <meta property="og:image" content="https://cv-web-alpha-woad.vercel.app/2.jpg" />
+        <meta property="og:description" content="Strona cv o front-end developerze. Informacje kontaktowe." />
+      </Head>
+    <header className={classes.header}/>
+    <main>
     <div className={classes.section}>
-      <h1>Moja strona</h1>
+      <h1>Witam na stronie cv</h1>
+      <p>Jestem Front-end Developerem.</p>
+      <div className={classes.button}>
+        <Button/>
+      </div>
+      
     </div>
+    </main>
     </>
   );
 }
