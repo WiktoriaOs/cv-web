@@ -14,12 +14,16 @@ export default function About()  {
         </title>
         <meta
           name="description"
-          content="Strona cv stworzona przeze mnie."
+          content="Strona cv o front-end developerze. Informacje kontaktowe."
         />
         <meta
           name="keywords"
-          content="CV" 
+          content="Wiktoria Osóbka-cv" 
         />
+        <meta property="og:title" content="CV-WEB" />
+        <meta property="og:url" content="https://cv-web-alpha-woad.vercel.app/" />
+        <meta property="og:image" content="https://cv-web-alpha-woad.vercel.app/2.jpg" />
+        <meta property="og:description" content="Strona cv o front-end developerze. Informacje kontaktowe." />
       </Head>
     <div className={classes.cta}>
       O mnie
