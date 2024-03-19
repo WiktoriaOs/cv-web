@@ -3,7 +3,7 @@ import classes from './page.module.css';
 import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
 import Head from 'next/head';
-import Avataro from '@/app/about/image';
+import {Avataro} from '@/app/about/image';
 
 
 export default function About()  {
