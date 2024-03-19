@@ -3,6 +3,7 @@ import classes from './page.module.css';
 import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
 import Head from 'next/head';
+import { Avatar } from './images/image';
 
 
 export default function About()  {
@@ -22,7 +23,7 @@ export default function About()  {
         />
         <meta property="og:title" content="CV-WEB" />
         <meta property="og:url" content="https://cv-web-alpha-woad.vercel.app/" />
-        <meta property="og:image" content="https://cv-web-alpha-woad.vercel.app/about/1.jpg" />
+        <meta property="og:image" content='<Avatar/>' />
         <meta property="og:description" content="Strona cv o front-end developerze. Informacje kontaktowe." />
       </Head>
     <div className={classes.cta}>
