@@ -4,14 +4,6 @@ import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
 import Head from 'next/head';
 
-
-export function Avatar({ id, alt }) {
-  return <Image src={`/about/${id}.jpg`} alt={alt} width="64" height="64" />
-}
- 
-export function Avataro() {
-  return <Avatar id={logoImg} alt="A portrait of me" />
-}
 export default function About()  {
   return (
     <>
@@ -29,7 +21,7 @@ export default function About()  {
         />
         <meta property="og:title" content="CV-WEB" />
         <meta property="og:url" content="https://cv-web-alpha-woad.vercel.app/" />
-        <meta property="og:image" content="https://cv-web-alpha-woad.vercel.app/about/1.jpg"/>
+        <meta property="og:image" content="https://cv-web-alpha-woad.vercel.app/1.jpg/"/>
         <meta property="og:description" content="Strona cv o front-end developerze. Informacje kontaktowe." />
       </Head>
     <div className={classes.cta}>
