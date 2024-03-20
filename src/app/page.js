@@ -1,8 +1,25 @@
 import Button from '@/components/button';
 import classes from './page.module.css';
 import Head from 'next/head';
+import { createClient } from 'contentful';
 
-export default function Home() {
+export async function getStaticProps(){
+
+  const client=createClient({
+    space:process.env.CONTENTFUL_SPACE_ID,
+    accessToken:process.env.CONTENTFUL_ACCESS_TOKEN
+  })
+
+  const res=await client.getEntries({content_type: 'cv-web'})
+
+  return {
+    props: {
+      homePage: res.items
+    }
+  }
+}
+
+export default function Home({homePage}) {
   return (
     <>
     <Head>
@@ -25,12 +42,18 @@ export default function Home() {
     <header className={classes.header}/>
     <main>
     <div className={classes.section}>
-      <h1>Witam na stronie cv</h1>
-      <p>Jestem Front-end Developerem.</p>
+      {homePage.map(home=> (
+        <>
+        <h1 key={home.sys.id}>{home.fields.main}</h1>
+        <p key={home.sys.id}>{home.fields.paragraf}</p>
+        </>
+      ))}
+      
+      
       <div className={classes.button}>
         <Button/>
       </div>
-      
+
     </div>
     </main>
     </>
