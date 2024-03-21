@@ -1,10 +1,10 @@
+
 import Button from '@/components/button';
 import classes from './page.module.css';
 import Head from 'next/head';
 import { createClient } from 'contentful';
 
-export async function getStaticProps(){
-
+async function getData(){
   const client=createClient({
     space:process.env.CONTENTFUL_SPACE_ID,
     accessToken:process.env.CONTENTFUL_ACCESS_TOKEN
@@ -12,14 +12,11 @@ export async function getStaticProps(){
 
   const res=await client.getEntries({content_type: 'cv-web'})
 
-  return {
-    props: {
-      homePage: res.items
-    }
-  }
+  return res
 }
 
-export default function Home({homePage}) {
+export default async function Home({}) {
+  const homePage= await getData()
   return (
     <>
     <Head>

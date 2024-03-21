@@ -3,25 +3,21 @@ import classes from './page.module.css';
 import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
 import Head from 'next/head';
-import { createClient } from 'contentful';
+import * as contentful from 'contentful';
 
-export async function getStaticProps(){
-
-  const client=createClient({
+async function getData(){
+  const client=contentful.createClient({
     space:process.env.CONTENTFUL_SPACE_ID,
     accessToken:process.env.CONTENTFUL_ACCESS_TOKEN
   })
 
   const res=await client.getEntries({content_type: 'about'})
 
-  return {
-    props: {
-      aboutPage: res.items
-    }
-  }
+  return res
 }
 
-export default function About({aboutPage})  {
+export default async function About({})  {
+  const aboutPage= await getData()
   return (
     <>
     <Head>
