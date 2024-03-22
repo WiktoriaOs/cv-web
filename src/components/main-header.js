@@ -23,6 +23,10 @@ export default function MainHeader (){
         <NavLink href='/about' className={isOpen === false ? classes.navlink : classes.navlink + ' ' + classes.active} onClick={openMenu}>
             O mnie</NavLink>
         </li>
+        <li className={classes.navitem}>
+        <NavLink href='/resume' className={isOpen === false ? classes.navlink : classes.navlink + ' ' + classes.active} onClick={openMenu}>
+            Resume</NavLink>
+        </li>
     </ul>
         <button className={isOpen === false ? classes.hamburger : classes.hamburger + ' ' + classes.active} onClick={openMenu}>
                     <span className={classes.bar}></span>
