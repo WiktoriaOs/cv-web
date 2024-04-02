@@ -3,8 +3,21 @@ import classes from './page.module.css';
 import Button from "@/components/button";
 import logoImg from "@/app/about/images/1.jpg";
 import Head from 'next/head';
+import * as contentful from 'contentful';
 
-export default function About()  {
+async function getData(){
+  const client=contentful.createClient({
+    space:process.env.CONTENTFUL_SPACE_ID,
+    accessToken:process.env.CONTENTFUL_ACCESS_TOKEN
+  })
+
+  const res=await client.getEntries({content_type: 'about'})
+
+  return res
+}
+
+export default async function About({})  {
+  const aboutPage= await getData()
   return (
     <>
     <Head>
@@ -33,17 +46,17 @@ export default function About()  {
     </div>
     <header className={classes.header}>
       <div className={classes.section}>
+
         <Image src={logoImg} className={classes.img}/>    
       </div>
       <div className={classes.main}>
         <div className={classes.center}>
-          <h3>Jestem Wiktoria, Jestem Front-end Developerem</h3>
-          <p>Front-end Developer jest odpowiedzialny za implementację 
-            elementów wizualnych, które są widoczne dla użytkowników i 
-            z którymi wchodzą oni w interakcję w aplikacji lub stronie 
-            internetowej. Optymalizuje działanie projektów pod jak 
-            najkrótsze czasy ładowania, czy np. responsywność.
-          </p>
+        {aboutPage.map(about=> (
+        <>
+        <h3 key={about.sys.id}>{about.fields.title}</h3>
+        <p key={about.sys.id}>{about.fields.opis}</p>
+        </>
+      ))}
           <hr/>
           <table>
             <tr>
